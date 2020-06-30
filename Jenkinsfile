@@ -1,10 +1,9 @@
 pipeline {
      agent any
      stages {
-        stage('Test'){
+		stage('Deploy') {
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
+                sh 'make publish'
             }
         }
        
